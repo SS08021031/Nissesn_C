@@ -31,13 +31,14 @@ public class TotalScore : MonoBehaviour
             rank = ResultRank.E;
         scoreText.text = "Result" + rank;
 
-        Nissensai.SendResult(rank);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Input.GetKey(KeyCode.Return);
+        Nissensai.SendResult(rank);
 
 
 
