@@ -19,4 +19,11 @@ public class Fairy01 : MonoBehaviour
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Destroy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
