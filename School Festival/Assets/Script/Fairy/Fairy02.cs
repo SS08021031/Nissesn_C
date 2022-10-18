@@ -14,16 +14,8 @@ public class Fairy02 : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = new Vector2(Mathf.Sin(A * Time.time) * 60.0f + fairyPos.x,Mathf.Cos(B * Time.time) * 2.0f + fairyPos.y);
+        transform.position = new Vector2(Mathf.Sin(A * Time.time) * 40.0f + fairyPos.x,Mathf.Cos(B * Time.time) * 1.0f + fairyPos.y);
+    }
 
-        
-    }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Destroy"))
-        {
-            Destroy(gameObject);
-        }
-    }
 
 }

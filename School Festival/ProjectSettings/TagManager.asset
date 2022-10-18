@@ -7,7 +7,6 @@ TagManager:
   - Food
   - Fork
   - kuti
-  - Destroy
   layers:
   - Default
   - TransparentFX
