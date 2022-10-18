@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title.unity
+    path: Assets/Scenes/QR.unity
     guid: de0a9d660bf9a4241845f0f166224dd8
   - enabled: 1
     path: Assets/Scenes/Ingame.unity
