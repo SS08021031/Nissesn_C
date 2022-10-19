@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    
+
     public static int score;
     public float limittime = 20.0f;
     public Text timerText;
     public Text scoreText;
     public bool isTimeUp;
-    // Start is called before the first frame update
+
+    
 
     public static int getscore()
     {

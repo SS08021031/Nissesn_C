@@ -37,9 +37,10 @@ public class TotalScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Input.GetKey(KeyCode.Return);
-        Nissensai.SendResult(rank);
-
+        if (Input.GetKey(KeyCode.Return))
+        {
+            Nissensai.SendResult(rank);
+        }
 
 
     }

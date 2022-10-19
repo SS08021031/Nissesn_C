@@ -4,32 +4,46 @@ using UnityEngine;
 
 public class Food01 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private List<GameObject> hitObjects = new List<GameObject>();
+    public int FoodScore;
+    
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.y >= 0.8f)
+        {
+            Debug.Log("takai");
+            Eat();
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Fork"))
         {
+            
             this.gameObject.transform.parent = other.gameObject.transform;
-            Eat();
         }
+            if (other.CompareTag("kuti"))
+            {
+
+                Debug.Log("kuti");
+                //Eat();
+            }
     }
+    
+
 
     void Eat()
     {
         Invoke("Destroy", 1);
+        
     }
     void Destroy()
     {
         Destroy(gameObject);
+        Timer.score += FoodScore;
     }
 }
