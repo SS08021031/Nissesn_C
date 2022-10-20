@@ -11,17 +11,19 @@ public class Fairy02 : MonoBehaviour
     private void Start()
     {
         fairyPos = transform.position;
+        Audio_Manager.instance.PlaySE(2);
     }
     private void Update()
     {
-        transform.position = new Vector2(Mathf.Sin(A * Time.time) * 40.0f + fairyPos.x,Mathf.Cos(B * Time.time) * 1.0f + fairyPos.y);
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Destroy"))
+        transform.position = new Vector2(Mathf.Sin(A * Time.time) * 40.0f + fairyPos.x, Mathf.Cos(B * Time.time) * 1.0f + fairyPos.y);
+
+        if (transform.position.x >= 25.0f)
         {
+            Debug.Log("migi");
             Destroy(gameObject);
         }
     }
+
+    
 
 }
