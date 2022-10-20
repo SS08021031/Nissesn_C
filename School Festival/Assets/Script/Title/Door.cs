@@ -5,11 +5,17 @@ public class Door : MonoBehaviour
     public int counter;
     SpriteRenderer sr;
     public bool DoorCheck;
+
+    public AudioClip DoorSe;
+    AudioSource audioSource;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
 
         DoorCheck = false;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -17,6 +23,8 @@ public class Door : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return))
         {
             DoorCheck = true;
+
+            audioSource.PlayOneShot(DoorSe);
         }
 
         if (DoorCheck == true)
