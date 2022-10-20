@@ -6,17 +6,23 @@ public class Food01 : MonoBehaviour
 {
     private List<GameObject> hitObjects = new List<GameObject>();
     public int FoodScore;
+    public bool isEat;
     
     void Start()
     {
-        
+        isEat = false;
     }
     void Update()
     {
-        if(transform.position.y >= 0.7f)
+        if(!isEat)
         {
-            Eat();
+            isEat = true;
+            if (transform.position.y >= 0.6f)
+            {
+                Eat();
+            }
         }
+        
     }
     void OnTriggerEnter2D(Collider2D other)
     {
