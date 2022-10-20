@@ -31,12 +31,11 @@ public class Anten : MonoBehaviour
         
         while (current < time)
         {
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
+            
                 material.SetFloat("_Alpha", current / time);
                 yield return new WaitForEndOfFrame();
                 current += Time.deltaTime;
-            }
+            
             
         }
         material.SetFloat("_Alpha", 1);
