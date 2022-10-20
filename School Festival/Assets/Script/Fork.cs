@@ -14,9 +14,10 @@ public class Fork : MonoBehaviour
 
     void Start()
     {
+        //Audio_Manager.instance.PlayinGameMusic();
         isClick = false;
         startPosition = this.transform.localEulerAngles;
-        Audio_Manager.instance.PlayinGameMusic();
+        
     }
 
     // Update is called once per frame

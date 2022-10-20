@@ -15,11 +15,10 @@ public class Fairy02 : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = new Vector2(Mathf.Sin(A * Time.time) * 40.0f + fairyPos.x, Mathf.Cos(B * Time.time) * 1.0f + fairyPos.y);
+        transform.position = new Vector2(Mathf.Sin(A * Time.time) * 100.0f + fairyPos.x, Mathf.Cos(B * Time.time) * 1.0f + fairyPos.y);
 
         if (transform.position.x >= 25.0f)
         {
-            Debug.Log("migi");
             Destroy(gameObject);
         }
     }
