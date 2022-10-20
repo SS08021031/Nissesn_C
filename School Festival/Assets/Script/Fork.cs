@@ -16,6 +16,7 @@ public class Fork : MonoBehaviour
     {
         isClick = false;
         startPosition = this.transform.localEulerAngles;
+        Audio_Manager.instance.PlayinGameMusic();
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class Fork : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
+            Audio_Manager.instance.PlaySE(3);
             isClick = true;
         }
 

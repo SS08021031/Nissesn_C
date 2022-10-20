@@ -13,9 +13,8 @@ public class Food01 : MonoBehaviour
     }
     void Update()
     {
-        if(transform.position.y >= 0.8f)
+        if(transform.position.y >= 0.7f)
         {
-            Debug.Log("takai");
             Eat();
         }
     }
@@ -23,19 +22,12 @@ public class Food01 : MonoBehaviour
     {
         if (other.CompareTag("Fork"))
         {
-            
+            Audio_Manager.instance.PlaySE(7);
             this.gameObject.transform.parent = other.gameObject.transform;
         }
-            if (other.CompareTag("kuti"))
-            {
-
-                Debug.Log("kuti");
-                //Eat();
-            }
+           
     }
     
-
-
     void Eat()
     {
         Invoke("Destroy", 1);
@@ -44,6 +36,7 @@ public class Food01 : MonoBehaviour
     void Destroy()
     {
         Destroy(gameObject);
+        Audio_Manager.instance.PlaySE(1);
         Timer.score += FoodScore;
     }
 }

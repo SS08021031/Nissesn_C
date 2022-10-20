@@ -12,18 +12,18 @@ public class Fairy01 : MonoBehaviour
     {
         enemypos = transform.position;
         rb2d = GetComponent<Rigidbody2D>();
+        Audio_Manager.instance.PlaySE(9);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * speed);
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Destroy"))
+
+        if (transform.position.x >= 25.0f)
         {
             Destroy(gameObject);
         }
     }
+    
 }
