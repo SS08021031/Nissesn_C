@@ -28,18 +28,15 @@ public class Anten : MonoBehaviour
     {
         GetComponent<Image>().material = material;
         float current = 0;
-        
+
         while (current < time)
         {
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
-                material.SetFloat("_Alpha", current / time);
-                yield return new WaitForEndOfFrame();
-                current += Time.deltaTime;
-            }
-            
+            material.SetFloat("_Alpha", current / time);
+            yield return new WaitForEndOfFrame();
+            current += Time.deltaTime;
         }
-        material.SetFloat("_Alpha", 1);
 
+        
+        material.SetFloat("_Alpha", 1);
     }
 }

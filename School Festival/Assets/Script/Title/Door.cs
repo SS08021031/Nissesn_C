@@ -27,7 +27,7 @@ public class Door : MonoBehaviour
 
             if (counter >= 1000)
             {
-                sr.enabled = false;
+                //sr.enabled = false;
             }
         }
         
